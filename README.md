@@ -29,4 +29,4 @@
 ### Демонстрация запросов
 
 #### 1. UNION
-![](C:\Users\xFeud\students-courses-db\scrinshots/150x100)
+![](/scrinshots/150x100)
