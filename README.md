@@ -29,4 +29,4 @@
 ### Демонстрация запросов
 
 #### 1. UNION
-![](/scrinshots/150x100)
+![](/scrinshots/UNION.jpg/150x150)
