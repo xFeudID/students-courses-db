@@ -1,4 +1,4 @@
-# Проект базы данных: Студенты и Курсы
+
 
 ## Ф.И.О, № группы
 Почкалов Ростислав, группа ИС22-9/1
@@ -25,6 +25,8 @@
 - PRIMARY KEY (student_id, course_id)
 - FOREIGN KEY (student_id) REFERENCES `students`(student_id)
 - FOREIGN KEY (course_id) REFERENCES `courses`(course_id)
+
+
 
 ### Демонстрация запросов
 
