@@ -9,22 +9,29 @@
 ### Таблицы и их атрибуты
 
 #### Таблица `students`
-- `student_id`: SERIAL, PRIMARY KEY
-- `first_name`: VARCHAR(50), NOT NULL
-- `last_name`: VARCHAR(50), NOT NULL
-- `group_number`: VARCHAR(10), NOT NULL
+| Поле         | Тип         | Описание                        |
+|--------------|-------------|---------------------------------|
+| `student_id` | SERIAL      | Уникальный идентификатор студента |
+| `first_name` | VARCHAR(50) | Имя студента                    |
+| `last_name`  | VARCHAR(50) | Фамилия студента                |
+| `group_number`| VARCHAR(10)| Номер группы студента           |
 
 #### Таблица `courses`
-- `course_id`: SERIAL, PRIMARY KEY
-- `course_name`: VARCHAR(100), NOT NULL
-- `description`: TEXT
+| Поле         | Тип         | Описание                        |
+|--------------|-------------|---------------------------------|
+| `course_id`  | SERIAL      | Уникальный идентификатор курса  |
+| `course_name`| VARCHAR(100)| Название курса                  |
+| `description`| TEXT        | Описание курса                  |
 
 #### Таблица `student_courses`
-- `student_id`: INT, NOT NULL
-- `course_id`: INT, NOT NULL
-- PRIMARY KEY (student_id, course_id)
-- FOREIGN KEY (student_id) REFERENCES `students`(student_id)
-- FOREIGN KEY (course_id) REFERENCES `courses`(course_id)
+| Поле         | Тип         | Описание                        |
+|--------------|-------------|---------------------------------|
+| `student_id` | INT         | Идентификатор студента (внешний ключ к `students.student_id`) |
+| `course_id`  | INT         | Идентификатор курса (внешний ключ к `courses.course_id`)    |
+| PRIMARY KEY (`student_id`, `course_id`) | - | Первичный ключ, комбинирующий `student_id` и `course_id` |
+| FOREIGN KEY (`student_id`) REFERENCES `students`(`student_id`) | - | Внешний ключ на таблицу `students` |
+| FOREIGN KEY (`course_id`) REFERENCES `courses`(`course_id`)    | - | Внешний ключ на таблицу `courses`  |
+
 
 ### Схема
 ![](/image/image.png)
