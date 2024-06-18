@@ -32,7 +32,7 @@
 | `course_name`| VARCHAR(100)| Название курса                  |
 | `description`| TEXT        | Описание курса                  |
 
-![](/image/courses.png)
+![](/image/c3.png)
 
 #### Таблица `student_courses`
 
