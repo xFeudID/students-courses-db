@@ -16,12 +16,17 @@
 | `last_name`  | VARCHAR(50) | Фамилия студента                |
 | `group_number`| VARCHAR(10)| Номер группы студента           |
 
+![](/image/students.png)
+
+
 #### Таблица `courses`
 | Поле         | Тип         | Описание                        |
 |--------------|-------------|---------------------------------|
 | `course_id`  | SERIAL      | Уникальный идентификатор курса  |
 | `course_name`| VARCHAR(100)| Название курса                  |
 | `description`| TEXT        | Описание курса                  |
+
+![](/image/courses.png)
 
 #### Таблица `student_courses`
 | Поле         | Тип         | Описание                        |
@@ -32,6 +37,7 @@
 | FOREIGN KEY (`student_id`) REFERENCES `students`(`student_id`) | - | Внешний ключ на таблицу `students` |
 | FOREIGN KEY (`course_id`) REFERENCES `courses`(`course_id`)    | - | Внешний ключ на таблицу `courses`  |
 
+![](/image/students_courses.png)
 
 ### Схема
 ![](/image/image.png)
